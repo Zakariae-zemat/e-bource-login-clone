@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+body::after {
+    content: '';
+    background-image: url(backminh.jpg);
+    position: absolute;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.15;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1000px;
+    height: 800px;
+    background-color: #1a9df5;
+    opacity: 0.25;
+    clip-path: circle(80% at right 50px);
+    overflow: hidden;
+  }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 3%;
+}
+.forme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; 
+    margin: 0 10% 0 0; 
+    padding: 0rem 5rem;
+    overflow: hidden;
+    transition: all 0.2s 0.7s;
+    /*transform: translate(-50%, -50%);
+    transition: 1s 0.7s ease-in-out;*/
+}
+.forme input,select,button{
+    margin: 8px;
+}
+.forme h1{
+    font-family: 'Scheherazade New', serif;
+    color: rgb(87, 87, 87);
+    font-size: 20px;
+    text-align: center;
+}
+.forme h2{
+    font-family: 'Scheherazade New', serif;
+    color: rgb(87, 87, 87);
+    font-size: 20px;
+    text-align: center;
+    
+}
+.forme input{
+    width: 400px;
+    height: 55px;
+    border: solid 1px rgb(175, 79, 1);
+    border-radius: 35px;
+    text-align: center;
+    background-color: rgb(255, 248, 241);
+}
+.forme input::placeholder{
+    color: rgb(151, 151, 151);
+    font-family:  'Scheherazade New', sans-serif;
+    font-size: 1.1rem;
+}
+input:focus {
+    border: solid 1px rgb(175, 79, 1);
+    box-shadow: none;
+    outline: none;
+}
+select:focus{
+    border: solid 1px rgb(175, 79, 1);
+    box-shadow: none;
+    outline: none;
+}
+.forme select{
+    width: 400px;
+    height: 55px;
+    border: solid 1px rgb(175, 79, 1);
+    border-radius: 35px;
+    text-align: center;
+    background-color:  rgb(255, 248, 241);
+    color: rgb(151, 151, 151);
+    font-size: 1rem;
+}
+.forme button{
+    background-color: rgb(255, 248, 241);
+    border: solid 2px rgb(87, 87, 87);
+    border-radius: 25px;
+    color: rgb(87, 87, 87);
+    width: 120px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.s{
+    width: 50%; 
+    margin: 0 0 0 10%; 
+    padding: 20px;
+    align-items: flex-end;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 6;
+}
+.s *{
+    margin-bottom: 0px;
+    font-family: 'Scheherazade New', sans-serif;
+    text-align: center;
+    color: rgb(70, 70, 70);
+}
+.s h1{
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+.s p{
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+}
+.image{
+    width: 100%;
+    transition: transform 1.1s ease-in-out;
+    transition-delay: 0.4s;
+    margin-bottom: 15px;
+}
+@media screen and (min-width: 860px) and (max-width: 960px) {
+    .forme input{
+        width: 380px;
+        height: 50px;
+    }
+    .forme select{
+        width: 380px;
+        height: 50px;
+    }
+    .forme h2{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 860px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .forme{
+        margin:auto;
+        margin-top: 400px;
+        
+    }
+    .s{
+        margin: auto;
+        margin-top: -10px;
+    }
+    .circle{
+        clip-path: circle(90% at bottom );
+        top: 450px;
+        bottom: 300px;
+    }
+
+}
